@@ -1,0 +1,41 @@
+! vim st=xdefaults :
+
+! Rounded
+! ObliviousGmn
+
+*foreground: 	#F2C2CA
+*background: 	#242424
+*cursorColor:  #242424
+*colorUL:      #C5CCA3
+
+! Black
+*color0:       #4C4C4C
+*color8:       #333333
+
+! Red
+*color1:       #E65C73
+*color9:       #FF6680
+
+! Green
+*color2:       #C5CCA3
+*color10:      #C7E6B8
+
+! Yellow
+*color3:       #B8CCA3
+*color11:      #BBCC9A
+
+! Blue
+*color4:       #CC7AB1
+*color12:      #CC8FCC
+
+! Magenta
+*color5:       #E673AC
+*color13:      #CC52A3
+
+! Cyan
+*color6:       #CCA3B1
+*color14:      #CC8FA3
+
+! White
+*color7:       #F2C2CA
+*color15:      #F2E6E8

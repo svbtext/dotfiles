@@ -1,0 +1,31 @@
+! vim: ft=xdefaults
+
+! dkeg 2014
+! browntownReload 
+
+*background:     #242120
+*foreground:     #b7afa4
+!black
+*color0:         #272625
+*color8:         #4f4d4c
+!red
+*color1:         #925633
+*color9:         #925633
+!green
+*color2:         #757c60
+*color10:        #757c60
+!yellow
+*color3:         #987f4b
+*color11:        #987f4b
+!blue
+*color4:         #515962
+*color12:        #515962
+!magenta
+*color5:         #685054
+*color13:        #605054
+!cyan
+*color6:         #506168 
+*color14:        #506168
+!white
+*color7:         #b7afa4
+*color15:        #b7afa4

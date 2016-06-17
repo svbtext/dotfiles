@@ -1,0 +1,31 @@
+! vim: set filetype=xdefaults :
+
+! dkeg 2015
+! mattd
+
+*background:    #1b1b1a
+*foreground:    #b0b0a2
+!black
+*color0:        #222221
+*color8:        #484847
+!red
+*color1:        #996140
+*color9:        #996140
+!green
+*color2:        #9d8554 
+*color10:       #9d8554 
+!yellow
+*color3:        #799c6a
+*color11:       #799c6a
+!blue
+*color4:        #5f656a
+*color12:       #5f656a
+!magenta
+*color5:        #7b6064
+*color13:       #7b6064
+!cyan
+*color6:        #566e6b
+*color14:       #566e6b
+!white
+*color7:        #b0b0a2
+*color15:       #b0b0a2

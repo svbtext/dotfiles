@@ -1,0 +1,31 @@
+! vim: set filetype=xdefaults :
+
+! leaf 
+! dkeg 2015
+
+*background:    #2f3627
+*foreground:    #b9bcb7
+!black
+*color0:        #353b30
+*color8:        #6d7267
+!red
+*color1:        #d06e5c
+*color9:        #d06e5c
+!green
+*color2:        #abbb52
+*color10:       #abbb52
+!yelow
+*color3:        #d4b06c
+*color11:       #d4b06c
+!blue
+*color4:        #4c7e89
+*color12:       #4c7e89
+!magenta
+*color5:        #814d61
+*color13:       #814d61
+!cyan
+*color6:        #79a69d
+*color14:       #79169d
+!white
+*color7:        #b9bcb7
+*color15:       #b9bcb7

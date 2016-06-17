@@ -1,0 +1,257 @@
+#   ░▀█▀░▀▀█░░░█▀▀░█▀█░█▀█░█▀▀░▀█▀░█▀▀
+#   ░░█░░░▀▄░░░█░░░█░█░█░█░█▀▀░░█░░█░█
+#   ░▀▀▀░▀▀░░░░▀▀▀░▀▀▀░▀░▀░▀░░░▀▀▀░▀▀▀
+
+
+#############
+### Theme ###
+#############
+
+font pango: neep 6
+
+set $FOCUS #4c5356
+set $UNFOCUS #2b3135
+
+# Layout colors 	    bord     bg       text     indicator (split)
+client.focused 		    $FOCUS   $FOCUS   $FOCUS   $FOCUS
+client.focused_inactive     $UNFOCUS $UNFOCUS $UNFOCUS $UNFOCUS
+client.unfocused 	    $UNFOCUS $UNFOCUS $UNFOCUS $UNFOCUS
+client.urgent 		    $FOCUS   $FOCUS   $FOCUS   $FOCUS
+client.background 	    $UNFOCUS
+
+###############
+### Borders ###
+###############
+
+new_window pixel 1
+new_float pixel 1
+
+focus_follows_mouse no
+
+############
+### Gaps ###
+############
+
+set $default_gaps_inner 8
+set $default_gaps_outer 16
+gaps inner $default_gaps_inner
+gaps outer $default_gaps_outer
+
+set $ws1 I
+set $ws2 II
+set $ws3 III
+set $ws4 IV
+set $ws5 V
+set $ws6 VI
+set $ws7 VII
+set $ws8 VIII
+set $ws9 IX
+set $ws10 X
+
+###############
+### Winodws ###
+###############
+
+# use these keys for focus, movement, and resize directions when reaching for
+# the arrows is not convenient
+set $up k
+set $down j
+set $left h
+set $right l
+
+# use Mouse+Mod1 to drag floating windows to their wanted position
+floating_modifier Mod1
+
+################
+### Keybinds ###
+################
+
+# start a terminal
+for_window [class="URxvt"] floating enable
+bindsym Mod1+Return exec --no-startup-id urxvt
+# bindsym Mod1+Return exec --no-startup-id termite
+
+# kill focused window
+bindsym Mod1+q kill
+
+# start dmenu (program launcher)
+bindsym Mod1+d exec --no-startup-id dmenu_run -dim .6 -fn 'neep-6' -p run\ program: -h 15 -t -q -nb '#121417' -nf '#deded6' -sb '#60867f' -sf '#deded6'
+
+# change focus
+bindsym Mod1+$left focus left
+bindsym Mod1+$down focus down
+bindsym Mod1+$up focus up
+bindsym Mod1+$right focus right
+
+# alternatively, you can use the cursor keys:
+bindsym Mod1+Left focus left
+bindsym Mod1+Down focus down
+bindsym Mod1+Up focus up
+bindsym Mod1+Right focus right
+
+# move focused window
+bindsym Mod1+Shift+$left move left
+bindsym Mod1+Shift+$down move down
+bindsym Mod1+Shift+$up move up
+bindsym Mod1+Shift+$right move right
+
+# alternatively, you can use the cursor keys:
+bindsym Mod1+Shift+Left move left
+bindsym Mod1+Shift+Down move down
+bindsym Mod1+Shift+Up move up
+bindsym Mod1+Shift+Right move right
+
+# split in horizontal orientation
+bindsym Mod1+c split h
+
+# split in vertical orientation
+bindsym Mod1+v split v
+
+# enter fullscreen mode for the focused container
+bindsym Mod1+f fullscreen
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym Mod1+s layout stacking
+bindsym Mod1+w layout tabbed
+bindsym Mod1+e layout toggle split
+
+# toggle tiling / floating
+bindsym Mod1+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym Mod1+space focus mode_toggle
+
+# focus the parent container
+bindsym Mod1+a focus parent
+
+# focus the child container
+#bindsym Mod1+d focus child
+
+# move the currently focused window to the scratchpad
+bindsym Mod1+Shift+minus move scratchpad
+
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+bindsym Mod1+minus scratchpad show
+
+# switch to workspace
+bindsym Mod1+1 workspace $ws1
+bindsym Mod1+2 workspace $ws2
+bindsym Mod1+3 workspace $ws3
+bindsym Mod1+4 workspace $ws4
+bindsym Mod1+5 workspace $ws5
+bindsym Mod1+6 workspace $ws6
+bindsym Mod1+7 workspace $ws7
+bindsym Mod1+8 workspace $ws8
+bindsym Mod1+9 workspace $ws9
+bindsym Mod1+0 workspace $ws10
+
+# move focused container to workspace
+bindsym Mod1+Shift+1 move container to workspace $ws1
+bindsym Mod1+Shift+2 move container to workspace $ws2
+bindsym Mod1+Shift+3 move container to workspace $ws3
+bindsym Mod1+Shift+4 move container to workspace $ws4
+bindsym Mod1+Shift+5 move container to workspace $ws5
+bindsym Mod1+Shift+6 move container to workspace $ws6
+bindsym Mod1+Shift+7 move container to workspace $ws7
+bindsym Mod1+Shift+8 move container to workspace $ws8
+bindsym Mod1+Shift+9 move container to workspace $ws9
+bindsym Mod1+Shift+0 move container to workspace $ws10
+
+############################
+### Reloading/Exiting i3 ###
+############################
+
+# reload the configuration file
+bindsym Mod1+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym Mod1+Shift+r restart
+
+# Shutdown, reboot, and lock screen menu
+set $Locker i3lock-fancy && sleep 1
+
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id $Locker, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+    
+bindsym mod1+Pause mode "$mode_system"
+
+#####################
+### Resize Window ###
+#####################
+
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+       
+        # Pressing left will shrink the window’s width.
+        # Pressing down will grow the window’s height.
+        bindsym $left       resize shrink width 10 px or 10 ppt
+        bindsym $down       resize grow height 10 px or 10 ppt
+        bindsym $up         resize shrink height 10 px or 10 ppt
+        bindsym $right      resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left        resize shrink width 10 px or 10 ppt
+        bindsym Down        resize grow height 10 px or 10 ppt
+        bindsym Up          resize shrink height 10 px or 10 ppt
+        bindsym Right       resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym Mod1+r mode "resize"
+
+#################
+### Shortcuts ###
+#################
+
+# Media Controls #
+bindsym F12 exec amixer set Master 5%+ unmute
+bindsym F11 exec amixer set Master 5%- unmute
+bindsym F10 exec amixer set Master toggle
+bindsym Mod4+Down exec --no-startup-id mpc stop
+bindsym Mod4+Up exec --no-startup-id mpc toggle
+bindsym Mod4+Left exec --no-startup-id mpc prev
+bindsym Mod4+Right exec --no-startup-id mpc next
+
+# Brightness Controls #
+bindsym F6 exec xbacklight +10
+bindsym F5 exec xbacklight -10
+
+# Take a screenshot #
+#bindsym Print exec --no-startup-id scrot '%F--%I:%M:%S:%p--$w$h--scrot.png' -e 'mv $f /home/svbtext/Pictures/scrot'
+#bindsym Mod1+Print exec --no-startup-id scrot --select
+bindsym Print exec maim ~/Pictures/scrot/$(date +%F-%T).png
+bindsym --release Delete exec maim --select ~/Pictures/scrot/$(date +%F-%T).png
+
+################
+### i3status ###
+################
+
+bar {
+        status_command i3status
+	position top
+	font pango: neep 6
+	colors {
+            background #121417
+            statusline #deded6
+            separator  #4c5356
+
+            focused_workspace #30433f #60867f #deded6
+            active_workspace #151515 #151515 #d7d0c7
+            inactive_workspace #4c5356 #2b3135 #deded6
+            urgent_workspace #cd546c #ef545f #eddcd3
+	}
+}

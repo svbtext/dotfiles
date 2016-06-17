@@ -1,0 +1,33 @@
+! vim: set filetype=xdefaults :
+
+! -- Author:  dkeg 
+! -- Created: 2016
+! -- Title:   book 
+
+
+*background:        #2f302d
+*foreground:        #c4c3c0
+!black
+*color0:            #363633
+*color8:            #4a4a47
+!red
+*color1:            #993f3c
+*color9:            #993f3c
+!green
+*color2:            #78855e
+*color10:           #78855e
+!yellow
+*color3:            #937b5a
+*color11:           #937b5a
+!blue
+*color4:            #415265
+*color12:           #415265
+!magenta
+*color5:            #885458
+*color13:           #885458
+!cyan
+*color6:            #646666
+*color14:           #646666
+!white
+*color7:            #c4c3c0
+*color15:           #c4c3c0

@@ -1,0 +1,46 @@
+"" vimperator colorscheme twily
+""
+"" ~/.vimperator/colors/twily.vimp
+
+highlight! CmdLine color: #deded6; background: #121417; 
+highlight! CmdLine>* font-family: "neep"; font-size: 7pt; height: 14px;
+highlight! Normal color: #deded6; /*background: #121417;*/ font-family: "neep"; font-size: 7pt;
+highlight! StatusLine color: #deded6; background: #121417; font-family: "neep"; font-size: 7pt;
+
+highlight! Bell border: none; background: #27282B;
+highlight! Boolean color: #AAABAD;
+highlight! CompDesc width: auto; color: #AAABAD;
+highlight! CompItem>* height: auto; padding: 0 8px;
+highlight! CompItem background: #27282B;
+highlight! CompItem[selected] color: #CECFD1; background: #17181A;
+highlight! CompTitle background: #27282B; font-family: "neep"; font-size: 7pt;
+highlight! CompTitle>* color: #CECFD1; padding: 2px 8px;
+
+highlight! Disabled color: #AAABAD;
+highlight! Enabled color: #AAABAD;
+highlight! ErrorMsg color: #F56C66; font-family: "neep"; font-size: 7pt;
+highlight! Filter color: #CECFD1; background: #17181A;
+highlight! FrameIndicator background: #AAABAD; z-index: 999; position: fixed; top: 0; bottom: 0; left: 0; right: 0;
+
+highlight! HelpNote color: #8859B3;
+highlight! HelpWarning color: #B359A4;
+
+highlight! Hint font-family: "neep"; font-size: 7pt; color: #CECFD1; background: #17181A; padding: 1px;
+highlight! HintActive color: #AAABAD; background: #27282B;
+
+highlight! InfoMsg color: #AAABAD;
+highlight! Keyword color: #AAABAD;
+highlight! LineNr color: #AAABAD;
+highlight! NonText color: #AAABAD;
+
+highlight! ModeMsg color: #AAABAD; background: 121417; padding: 0 8px; font-family: "neep"; font-size: 7pt;
+highlight! MoreMsg color: #AAABAD; font-family: "neep"; font-size: 7pt;
+
+highlight! PromptText color: #AAABAD; padding-top: 4px;
+highlight! Question color: #AAABAD;
+
+highlight! Title color: #CECFD1;
+highlight! WarningMsg color: #AAABAD;
+
+
+

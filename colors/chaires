@@ -1,0 +1,32 @@
+! vim: set filetype=xdefaults :
+
+! -- Title:   chaires 
+! -- Author:  dkeg
+! -- Created: 2016
+
+*background:        #383844
+*foreground:        #c3c3c6
+!black
+*color0:            #3d3d49
+*color8:            #4b4b56
+!red
+*color1:            #a7664a
+*color9:            #a7664a
+!green
+*color2:            #6e8c6e
+*color10:           #6e8c6e
+!yellow
+*color3:            #cba264
+*color11:           #cba264
+!blue
+*color4:            #535f6b
+*color12:           #535f6b
+!magenta
+*color5:            #775a62
+*color13:           #775a62
+!cyan
+*color6:            #576e68
+*color14:           #576e68
+!white
+*color7:            #c3c3c6
+*color15:           #c3c3c6

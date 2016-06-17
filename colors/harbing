@@ -1,0 +1,31 @@
+! vim: set filetype=xdefaults :
+
+! harbing 
+! dkeg 2015
+
+*background     #38302b
+*foreground     #c8b49d
+!black
+*color0:        #473d36
+*color8:        #6b635e
+!red
+*color1:        #bd6151
+*color9:        #bd6151
+!green
+*color2:        #6e9383
+*color10:       #6e9383
+!yellow
+*color3:        #d7b18a
+*color11:       #d7b18a
+!blue
+*color4:        #8a8f94
+*color12:       #8a8f94
+!magenta
+*color5:        #bd9a81
+*color13:       #bd9a81
+!cyan
+*color6:        #91a1a5
+*color14:       #91a1a5
+!white
+*color7:        #c8b49d
+*color15:       #c8b49d

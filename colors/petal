@@ -1,0 +1,32 @@
+! vim: set filetype=xdefaults :
+
+! -- Author:  dkeg
+! -- Created: 2016
+! -- Title:   petal 
+
+*background:   #24231f
+*foreground:   $94936e
+!black
+*color0:       #282622
+*color8:       #3b3b38
+!red
+*color1:       #785326
+*color9:       #785326
+!green
+*color2:       #516941
+*color10:      #516941
+!yellow
+*color3:       #827834
+*color11:      #827834
+!blue
+*color4:       #62675f
+*color12:      #62675f
+!magenta
+*color5:       #6a5632
+*color13:      #6a5632
+!cyan
+*color6:       #4e5d4d
+*color14:      #4e5d4d
+!white
+*color7:       #94936e
+*color15:      #94936e

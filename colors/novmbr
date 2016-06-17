@@ -1,0 +1,31 @@
+! vim: set filetype=xdefaults :
+
+! novmbr 
+! dkeg
+
+*background:    #1f1510
+*foreground:    #c7b8ac
+!black
+*color0:        #241812
+*color8:        #4b433f
+!red
+*color1:        #9f6434
+*color9:        #9f6434
+!green
+*color2:        #9dac5f
+*color10:       #9dac5f
+!yellow
+*color3:        #cca75f
+*color11:       #cca75f
+!blue
+*color4:        #2f7d7c
+*color12:       #2f7d7c
+!magenta
+*color5:        #b5896e
+*color13:       #b5896e
+!cyan
+*color6:        #52877f
+*color14:       #52877f
+!white
+*color7:        #c7b8ac
+*color15:       #c7b8ac
