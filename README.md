@@ -12,3 +12,9 @@ Current scrot:
 * https://github.com/xero/dotfiles
 * /r/unixporn
 * various /g/ and /wg/ threads
+
+## To-do list
+
+[ ] Switch to lemonbar
+[ ] Make better vim theme
+[ ] Find better WM someday
