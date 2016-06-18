@@ -12,8 +12,7 @@ fi
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
 xrdb -load ~/.Xresources
-hsetroot -fill ~/Pictures/Wallpapers/NU5Ek0U.jpg -blur 10 &
-unclutter &
+hsetroot -tile ~/Pictures/Wallapers/summertilebg.png &
 xflux -z 85308 -k 2800 &
 compton --config ~/.config/compton.conf -b &
 exec i3
