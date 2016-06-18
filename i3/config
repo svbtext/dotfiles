@@ -67,7 +67,7 @@ floating_modifier Mod1
 ################
 
 # start a terminal
-for_window [class="URxvt"] floating enable
+# for_window [class="URxvt"] floating enable
 bindsym Mod1+Return exec --no-startup-id urxvt
 # bindsym Mod1+Return exec --no-startup-id termite
 
@@ -249,9 +249,9 @@ bar {
             statusline #deded6
             separator  #4c5356
 
-            focused_workspace #30433f #60867f #deded6
+            focused_workspace #53654e #769070 #deded6
             active_workspace #151515 #151515 #d7d0c7
             inactive_workspace #4c5356 #2b3135 #deded6
-            urgent_workspace #cd546c #ef545f #eddcd3
+            urgent_workspace #cd546c #80757e #deded6
 	}
 }

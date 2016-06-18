@@ -44,10 +44,12 @@ URxvt.font: xft:neep-6
 !URxvt.font: xft:ohsnap-8
 !URxvt.font: xft:bitocra-4
 !URxvt.font: xft:tinycandy-8
+!URxvt.font: xft:Terminus-12
 
 URxvt.boldFont:
-URxvt*letterSpace:    1
+URxvt*letterSpace:    0
 URxvt*lineSpace:      2
+
 
 ### Perl ###
 URxvt.perl-ext-common:     default,clipboard,vtwheel,matcher
