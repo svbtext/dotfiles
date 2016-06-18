@@ -15,6 +15,8 @@ Current scrot:
 
 ## To-do list
 
-[ ] Switch to lemonbar
-[ ] Make better vim theme
-[ ] Find better WM someday
+- [ ] Switch to lemonbar
+
+- [ ] Make better vim theme
+
+- [ ] Find better WM someday
