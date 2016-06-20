@@ -15,7 +15,7 @@ xrdb -load ~/.Xresources
 
 # Set wallpaper and bar
 hsetroot -tile ~/pic/Wallpapers/summertilebg.png &
-$HOME/panel.sh &
+#$HOME/panel.sh &
 
 # Hide the mouse after a period of inactivity
 unclutter -idle 2 &
