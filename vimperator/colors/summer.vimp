@@ -36,8 +36,8 @@ hi ErrorMsg             color: #2b303b; background: #bf616a; font-weight: normal
 
 
 "Hint section
-"hi Hint                 font-family: "neep"; font-size: 7px; font-weight: normal; color: #f6e9e9; background-color: red; border-color: ButtonShadow; border-width: 0px; border-style: solid; padding 0px 1px 0px 1px;
-hi Hint               	font-family: "neep"; font-size: 7px; font-weight: normal; color: #bf616a; background-color: #2b303b; border: solid 1px #65737e;
+"hi Hint                 font-family: "neep"; font-size: 9px; font-weight: normal; color: #deded6; background-color: red; border-color: ButtonShadow; border-width: 0px; border-style: solid; padding 0px 1px 0px 1px;
+hi Hint               	font-family: "neep"; font-size: 9px; font-weight: normal; color: #deded6; background-color: #2b303b; border: solid 1px #65737e;
 hi Hint::after          content: attr(number);
 hi HintActive           background: #8fa1b3; color: #deded6;
 hi HintElem             background-color: #2b303b; color: #a3be8c;

@@ -12,12 +12,12 @@ font pango: neep 6
 set $FOCUS #4c5356
 set $UNFOCUS #2b3135
 
-# Layout colors 	    bord     bg       text     indicator (split)
-client.focused 		    $FOCUS   $FOCUS   $FOCUS   $FOCUS
+# Layout colors 	        bord     bg       text     indicator (split)
+client.focused 		        $FOCUS   $FOCUS   $FOCUS   $FOCUS
 client.focused_inactive     $UNFOCUS $UNFOCUS $UNFOCUS $UNFOCUS
-client.unfocused 	    $UNFOCUS $UNFOCUS $UNFOCUS $UNFOCUS
-client.urgent 		    $FOCUS   $FOCUS   $FOCUS   $FOCUS
-client.background 	    $UNFOCUS
+client.unfocused 	        $UNFOCUS $UNFOCUS $UNFOCUS $UNFOCUS
+client.urgent 		        $FOCUS   $FOCUS   $FOCUS   $FOCUS
+client.background 	        $UNFOCUS
 
 ###############
 ### Borders ###
@@ -33,7 +33,7 @@ focus_follows_mouse no
 ############
 
 set $default_gaps_inner 8
-set $default_gaps_outer 16
+set $default_gaps_outer 18
 gaps inner $default_gaps_inner
 gaps outer $default_gaps_outer
 
@@ -111,9 +111,9 @@ bindsym Mod1+v split v
 bindsym Mod1+f fullscreen
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym Mod1+s layout stacking
-bindsym Mod1+w layout tabbed
-bindsym Mod1+e layout toggle split
+#bindsym Mod1+s layout stacking
+#bindsym Mod1+w layout tabbed
+#bindsym Mod1+e layout toggle split
 
 # toggle tiling / floating
 bindsym Mod1+Shift+space floating toggle
@@ -168,7 +168,7 @@ bindsym Mod1+Shift+c reload
 bindsym Mod1+Shift+r restart
 
 # Shutdown, reboot, and lock screen menu
-set $Locker i3lock-fancy && sleep 1
+set $Locker sleep 1 && i3lock-fancy
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
@@ -233,25 +233,25 @@ bindsym F5 exec xbacklight -10
 # Take a screenshot #
 #bindsym Print exec --no-startup-id scrot '%F--%I:%M:%S:%p--$w$h--scrot.png' -e 'mv $f /home/svbtext/Pictures/scrot'
 #bindsym Mod1+Print exec --no-startup-id scrot --select
-bindsym Print exec maim ~/Pictures/scrot/$(date +%F-%T).png
-bindsym --release Delete exec maim --select ~/Pictures/scrot/$(date +%F-%T).png
+bindsym Print exec maim ~/pic/scrot/$(date +%F-%T).png
+bindsym --release Delete exec maim --select ~/pic/scrot/$(date +%F-%T).png
 
 ################
 ### i3status ###
 ################
 
-bar {
-        status_command i3status
-	position top
-	font pango: neep 6
-	colors {
-            background #121417
-            statusline #deded6
-            separator  #4c5356
-
-            focused_workspace #53654e #769070 #deded6
-            active_workspace #151515 #151515 #d7d0c7
-            inactive_workspace #4c5356 #2b3135 #deded6
-            urgent_workspace #cd546c #80757e #deded6
-	}
-}
+#bar {
+#    status_command i3status
+#	position top
+#	font pango: neep 6
+#	colors {
+#            background #121417
+#            statusline #deded6
+#            separator  #4c5356
+#
+#            focused_workspace #53654e #769070 #deded6
+#            active_workspace #151515 #151515 #d7d0c7
+#            inactive_workspace #4c5356 #2b3135 #deded6
+#            urgent_workspace #b83650 #cd546c #deded6
+#	}
+#}

@@ -1,10 +1,12 @@
 # dotfiles
 
-These are my dotfiles. There are many, many like them, but these are mine. 
+It's not original, but it's comfy for me and it compliments my workflow.
 
-Current scrot:
+## Some of these configs/scripts are very hacked together, YMMV
 
-![scrot](https://0x0.st/TMF.png)
+Current pic (June 20th):
+
+![scrot](https://0x0.st/TJa.png)
 
 ## Inspirations
 * https://github.com/windelicato/dotfiles
@@ -12,11 +14,3 @@ Current scrot:
 * https://github.com/xero/dotfiles
 * /r/unixporn
 * various /g/ and /wg/ threads
-
-## To-do list
-
-- [ ] Switch to lemonbar
-
-- [ ] Make better vim theme
-
-- [ ] Find better WM someday

@@ -1,0 +1,3 @@
+PANEL_FIFO=/tmp/panel-fifo
+PANEL_WM_NAME=lemonbar
+export PANEL_FIFO PANEL_WM_NAME

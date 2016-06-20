@@ -12,12 +12,24 @@ fi
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
 xrdb -load ~/.Xresources
-<<<<<<< HEAD
-hsetroot -tile ~/Pictures/Wallpapers/summertilebg.png &
+
+# Set wallpaper and bar
+hsetroot -tile ~/pic/Wallpapers/summertilebg.png &
+$HOME/panel.sh &
+
+# Hide the mouse after a period of inactivity
+unclutter -idle 2 &
+
+# Mouse
 xsetroot -cursor_name left_ptr &
-=======
-hsetroot -tile ~/Pictures/Wallapers/summertilebg.png &
->>>>>>> 287481fec11478cdc438504cf47eb2a851cae777
+
+# Xflux (for night-time coding)
 xflux -z 85308 -k 2800 &
+
+# Shadows
 compton --config ~/.config/compton.conf -b &
-exec i3
+
+# WM of choice
+sxhkd &
+exec bspwm
+#exec i3

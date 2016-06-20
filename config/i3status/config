@@ -10,7 +10,7 @@ general {
         colors = true
         color_good = "#769070"
         color_degraded = "#4f5b66"
-        color_bad = "#80757e"
+        color_bad = "#cd546c"
         color_separator = "#ffffff"
         interval = 1
 }
@@ -28,8 +28,8 @@ volume master {
         device = "default"
         mixer  = "Master"
         mixer_idx = 0
-        format = "%volume "
-        format_muted = "%volume "
+        format = " %volume "
+        format_muted = " %volume "
 }
 
 cpu_usage {
@@ -37,7 +37,7 @@ cpu_usage {
 }
 
 wireless _first_ {
-        format_up = "%bitrate on %essid "
+        format_up = " %bitrate on %essid "
         format_down = "W: down"
 }
 
@@ -48,15 +48,15 @@ ethernet _first_ {
 }
 
 battery 0 {
-        format = "%status%percentage "
+        format = " %percentage "
         format_down = " No battery! "
-        status_chr = ""
-        status_bat = ""
-        status_full = "" 
+        status_chr = ""
+        status_bat = ""
+        status_full = "" 
 }
 
 time {
-        format = "%H : %M "
+        format = " %I:%M "
 }
 
 load {
@@ -64,5 +64,5 @@ load {
 }
 
 disk "/" {
-        format = "⁣%percentage_used of %avail "
+        format = " ⁣%percentage_used of %avail "
 }
