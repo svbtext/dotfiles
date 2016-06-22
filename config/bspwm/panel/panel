@@ -1,7 +1,8 @@
 #! /usr/bin/zsh
 
 PANEL_FIFO=/tmp/panel-fifo
-PANEL_HEIGHT=18
+PANEL_HEIGHT=14
+#PANEL_GEO=1322x22+21+12
 PANEL_FONT_FAMILY="neep:size=6"
 ICON_FONT="siji:size=8"
 
@@ -22,7 +23,7 @@ xtitle -sf 'T%s' > "$PANEL_FIFO" &
 # Clock
 while true;
 	do
-		echo 'C\ue128' $(date +"%l:%M %p");
+        echo 'C\ue128' $(date +"%l:%M %p");
 	sleep 5;
 done > "$PANEL_FIFO" &
 
@@ -38,27 +39,27 @@ do
 BATT_LEVEL=$(acpi -b | grep -o '[[:digit:]]\+%' | sed 's/%//')
 	if [ $BATT_LEVEL -ge 80 ]
 		then
-			echo 'B\ue23d' $BATT_LEVEL%
+			echo 'B\ue03f' $BATT_LEVEL%
 	fi
 
 	if [ $BATT_LEVEL -ge 60 -a $BATT_LEVEL -lt 80 ]
 		then
-			echo 'B\ue23d' $BATT_LEVEL%
+			echo 'B\ue03e' $BATT_LEVEL%
 	fi
 
 	if [ $BATT_LEVEL -ge 40 -a $BATT_LEVEL -lt 60 ]
 		then
-			echo 'B\ue23c' $BATT_LEVEL%
+			echo 'B\ue03e' $BATT_LEVEL%
 	fi
 
 	if [ $BATT_LEVEL -ge 20 -a $BATT_LEVEL -lt 40 ]
 		then
-			echo 'B\ue23c' $BATT_LEVEL%
+			echo 'B\ue03d' $BATT_LEVEL%
 	fi
 
 	if [ $BATT_LEVEL -lt 20 ]
 		then
-			echo 'B%{T3}\ue23b%{T1}' $BATT_LEVEL%
+			echo 'B%{T3}\ue03e%{T1}' $BATT_LEVEL%
 	fi
 	sleep 30;
 done > "$PANEL_FIFO" &
@@ -89,7 +90,6 @@ then
 	sleep 0.1
 done > $PANEL_FIFO &
 
-
 # Wifi
 while true;
 do
@@ -99,25 +99,25 @@ WIFI_SSID=$(iw wlp2s0 link | grep 'SSID' | sed 's/SSID: //' | sed 's/\t//')
 done > $PANEL_FIFO &
 
 # Power
-echo P'\ue10c' > $PANEL_FIFO &
+echo P'\ue10d bspwm' > $PANEL_FIFO &
 
-# # music controls
-# while true;
-# do
-# 	SONG_NAME=$(mpc | head -n1)
-# 	if [[ -n $(mpc status | grep paused) ]]
-# 	then
-# 		echo "R%{T3}%{A:mpc prev:}\uf19c%{A} %{A:mpc play:}\uf198%{A}  %{A:mpc next:}\uf17c%{A}%{T1} $SONG_NAME"
-# 	else
-# 		echo "R%{T3}%{A:mpc prev:}\uf19c%{A} %{A:mpc pause:}\uf191%{A} %{A:mpc next:}\uf17c%{A}%{T1} $SONG_NAME"
-# 	fi
-#
-# 	sleep 1
-# done > $PANEL_FIFO &
+# music controls
+while true;
+do
+	SONG_NAME=$(mpc | head -n1)
+ 	if [[ -n $(mpc status | grep paused) ]]
+ 	then
+ 		echo "R%{T3}%{A:mpc prev:}\ue096%{A} %{A:mpc play:}\ue09a%{A} %{A:mpc next:}\ue09c%{A}%{T1} $SONG_NAME"
+ 	else
+ 		echo "R%{T3}%{A:mpc prev:}\ue096%{A} %{A:mpc pause:}\ue09b%{A} %{A:mpc next:}\ue09c%{A}%{T1} $SONG_NAME"
+ 	fi
+
+ 	sleep 1
+done > $PANEL_FIFO &
 
 
 . ~/.config/bspwm/panel/panel_colors
 
-cat "$PANEL_FIFO" | ~/.config/bspwm/panel/panel_bar | lemonbar -g x$PANEL_GEO -f "$PANEL_FONT_FAMILY" -f "$ICON_FONT" -F "$COLOR_FOREGROUND" -B "$COLOR_BACKGROUND" -u 2 -p -o 1 | zsh &
+cat "$PANEL_FIFO" | ~/.config/bspwm/panel/panel_bar | lemonbar -g x$PANEL_HEIGHT -f "$PANEL_FONT_FAMILY" -f "$ICON_FONT" -F "$COLOR_FOREGROUND" -B "$COLOR_BACKGROUND" -u 2 -p | zsh &
 
 wait

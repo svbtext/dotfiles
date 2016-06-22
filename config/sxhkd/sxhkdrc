@@ -8,7 +8,7 @@ alt + Return
 
 # program launcher
 alt + d
-	dmenu_run -dim .6 -fn 'neep-6' -p exec: -h 18 -t -q -nb '#121417' -nf '#deded6' -sb '#2b3135' -sf '#deded6'
+	dmenu_run -dim .6 -fn 'neep-6' -p exec: -h 14 -t -q -nb '#121417' -nf '#deded6' -sb '#2b3135' -sf '#deded6'
 
 # make sxhkd reload its configuration files:
 alt + shift + Escape
@@ -20,19 +20,22 @@ alt + shift + Escape
 
 # volume controls
 F12
-    amixer set Master 5%+ unmute
-
-alt + F12
-    amixer set Master 1%+ unmute
+    $HOME/.config/bspwm/panel/notify_volume + 5
 
 F11
-    amixer set Master 5%- unmute
-
-alt + F11
-    amixer set Master 1%- unmute
+    $HOME/.config/bspwm/panel/notify_volume - 3
 
 F10
-    amixer set Master toggle
+    $HOME/.config/bspwm/panel/notify_volume !
+
+F1
+    $HOME/.config/bspwm/panel/notify_mpd -p
+
+F2
+    $HOME/.config/bspwm/panel/notify_mpd -t 
+
+F3
+    $HOME/.config/bspwm/panel/notify_mpd -n
 
 # brightness
 F6
@@ -54,7 +57,7 @@ Delete
 
 # quit bspwm normally
 ctrl + alt + Escape
-	bspc quit
+        sh ~/.config/bspwm/panel/config_panel_bar_pop
 
 # close and kill
 alt + {_,shift + }q
@@ -93,8 +96,8 @@ alt + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
 # focus the node for the given path jump
-alt + {p,b,comma,period}
-	bspc node -f @{parent,brother,first,second}
+#alt + {p,b,comma,period}
+#	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous node
 alt + {_,shift + }c

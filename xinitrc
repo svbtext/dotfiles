@@ -15,7 +15,6 @@ xrdb -load ~/.Xresources
 
 # Set wallpaper and bar
 hsetroot -tile ~/pic/Wallpapers/summertilebg.png &
-#$HOME/panel.sh &
 
 # Hide the mouse after a period of inactivity
 unclutter -idle 2 &
@@ -28,6 +27,9 @@ xflux -z 85308 -k 2800 &
 
 # Shadows
 compton --config ~/.config/compton.conf -b &
+
+# MPD daemon start (if no other user instance exists)
+[ ! -s ~/.mpd/mpd.pid ] && mpd
 
 # WM of choice
 sxhkd &

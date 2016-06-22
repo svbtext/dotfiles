@@ -51,6 +51,7 @@ URxvt.font: xft:neep-6,\
 !URxvt.font: xft:bitocra-4
 !URxvt.font: xft:tinycandy-8
 !URxvt.font: xft:Terminus-12
+!URxvt.font: xft:dweep-8
 
 URxvt.boldFont:
 URxvt*letterSpace:    0

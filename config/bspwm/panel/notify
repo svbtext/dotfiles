@@ -1,0 +1,12 @@
+#!/bin/sh
+
+source $(dirname $0)/config
+
+(echo " $@"; sleep $DURATION)\
+| lemonbar \
+        -f "siji:size=8"\
+	-f "neep:size=6"\
+        -F "$COLOR_FOREGROUND"\
+        -B "$COLOR_BACKGROUND"\
+        -g "$NOTIFY_GEOMETRY"\
+        -u $LINEHEIGHT
