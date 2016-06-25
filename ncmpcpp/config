@@ -78,7 +78,7 @@ visualizer_output_name = "fifo"
 ## Keep in mind that sane values start with >=10.
 ##
 #
-visualizer_sync_interval = "30"
+visualizer_sync_interval = "10"
 #
 ##
 ## Note: To enable spectrum frequency visualization
@@ -87,8 +87,8 @@ visualizer_sync_interval = "30"
 #
 visualizer_type = "spectrum" (spectrum/wave)
 #
-#visualizer_look = "●│"
-visualizer_look = "●▉"
+visualizer_look = "●│"
+#visualizer_look = "●▉"
 ##### system encoding #####
 ##
 ## ncmpcpp should detect your charset encoding
@@ -319,6 +319,7 @@ user_interface = "classic" (classic/alternative)
 #
 default_find_mode = "wrapped" (wrapped/normal)
 #
+resume_paused "yes"
 #
 default_tag_editor_pattern = "%n - %t"
 #

@@ -9,7 +9,7 @@
 
 
 ### Define term colors ###
-#include "/home/svbtext/.colors/summer"
+#include "/home/svbtext/.colors/city"
 
 
 URxvt*depth:            24
@@ -52,6 +52,7 @@ URxvt.font: xft:neep-6,\
 !URxvt.font: xft:tinycandy-8
 !URxvt.font: xft:Terminus-12
 !URxvt.font: xft:dweep-8
+!URxvt.font: xft:tamsyn-6
 
 URxvt.boldFont:
 URxvt*letterSpace:    0

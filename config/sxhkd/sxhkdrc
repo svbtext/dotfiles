@@ -20,13 +20,13 @@ alt + shift + Escape
 
 # volume controls
 F12
-    $HOME/.config/bspwm/panel/notify_volume + 5
+	amixer set Master 5%+ unmute
 
 F11
-    $HOME/.config/bspwm/panel/notify_volume - 3
+	amixer set Master 5%- unmute
 
 F10
-    $HOME/.config/bspwm/panel/notify_volume !
+	amixer set Master toggle
 
 F1
     $HOME/.config/bspwm/panel/notify_mpd -p

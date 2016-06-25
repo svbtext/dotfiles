@@ -1,22 +1,35 @@
-!urban 
-!3c344f
-!# more purple
-#define b2g    #2a2437
-#define b2lk   #30293f
-!# less purple
-#define bg   #312e39
-#define blk   #33303b
+! urban 
+! 3c344f
 
-#define fg    #c0a79a
-#define bblk  #4f4b58
-#define r9ed   #b42e48
-#define r8ed   #b14451
-#define r7ed   #a03352
-#define red   #87404f
-#define grn   #74934e
-#define y1lw   #b88450
-#define ylw   #cd9359
-#define blu   #615772
-#define mag   #783e57
-#define cyn   #554757
-#define wht   #c0a79a
+!!! more purple
+! *.background:    #2a2437
+! *.color0:        #30293f
+
+!!! less purple
+*.background:    #312e39
+*.color0:        #33303b
+
+*.foreground:    #c0a79a
+
+*.color8:         #4f4b58
+
+*.color1:        #87404f
+*.color9:        #87404f
+
+*.color2:        #74934e
+*.color10:       #74934e
+
+*.color3:        #cd9359
+*.color11:       #cd9359
+
+*.color4:        #615772
+*.color12:       #615772
+
+*.color5:        #783e57
+*.color13:       #783e57
+
+*.color6:        #554757
+*.color14:       #554757
+
+*.color7:        #c0a79a
+*.color15:       #c0a79a

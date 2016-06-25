@@ -29,7 +29,9 @@ xflux -z 85308 -k 2800 &
 compton --config ~/.config/compton.conf -b &
 
 # MPD daemon start (if no other user instance exists)
-[ ! -s ~/.mpd/mpd.pid ] && mpd
+[ ! -s ~/.mpd/mpd.pid ] && mpd &
+# MPDas daemon start
+[[ -z $(pgrep -xU $UID mpdas) ]] && mpdas &
 
 # WM of choice
 sxhkd &

@@ -1,22 +1,17 @@
 #!/bin/bash
-# Color directory
-CD="$HOME/.Xresources"
 
-# Fetch the Colors
 BG="#121417"
 FG="#deded6"
 
-# Fonts
 FONT1="neep:size=6"
 FONT2="siji:size=8"
 
-# Panel 
 PW=256
 PH=24
 PX=582
 PY=372
 
-echo "%{c}  %{A:q:}quit%{A}  %{A:p:}shutdown%{A}  %{A:r:}reboot%{A}  %{A:s:}suspend%{A}  %{A:b:}exit%{A}  " | lemonbar -g ${PW}x${PH}+${PX}+${PY} -f "$FONT1" -f "$FONT2" -B "$BG" -F "$FG" -p | \
+echo "%{c}  %{A:l:}logout%{A}  %{A:p:}shutdown%{A}  %{A:r:}reboot%{A}  %{A:s:}suspend%{A}  %{A:b:}exit%{A}  " | lemonbar -g ${PW}x${PH}+${PX}+${PY} -f "$FONT1" -f "$FONT2" -B "$BG" -F "$FG" -p | \
     while :; do
         read line
         case $line in 
@@ -39,9 +34,8 @@ echo "%{c}  %{A:q:}quit%{A}  %{A:p:}shutdown%{A}  %{A:r:}reboot%{A}  %{A:s:}s
                 reboot
                 exit
                 ;;
-	    'q')
-		bspc quit &
-		pkill panel
+	    'l')
+		bspc quit && pkill panel
 		exit
 		;;
 

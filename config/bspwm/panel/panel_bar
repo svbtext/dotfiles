@@ -37,7 +37,7 @@ while read -r line ; do
 			;;
 		P*)
 			# power
-			power="%{A:sh ~/.bspwm/panel/config_panel_bar_pop:}$PADDING${line#?}$PADDING%{A}"
+            power="%{A:bspc quit && pkill panel:}$PADDING${line#?}$PADDING%{A}"
 			;;
 
 		W*)
@@ -90,5 +90,5 @@ while read -r line ; do
 			done
 			;;
 	esac
-    printf "%s\n" "%{l}${power}%{c}${wm_infos}%{r}${wifi}${battery}${clock}"
+    printf "%s\n" "%{l}${power}%{c}${wm_infos}%{r}${wifi}${volume}${battery}${clock}"
 done
