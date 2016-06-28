@@ -1,17 +1,17 @@
 #!/bin/bash
 
-BG="#121417"
-FG="#deded6"
+BG="#0b1317"
+FG="#a899c1"
 
 FONT1="neep:size=6"
 FONT2="siji:size=8"
 
 PW=256
 PH=24
-PX=582
+PX=556
 PY=372
 
-echo "%{c}  %{A:l:}logout%{A}  %{A:p:}shutdown%{A}  %{A:r:}reboot%{A}  %{A:s:}suspend%{A}  %{A:b:}exit%{A}  " | lemonbar -g ${PW}x${PH}+${PX}+${PY} -f "$FONT1" -f "$FONT2" -B "$BG" -F "$FG" -p | \
+echo "%{c}  %{A:l:}logout%{A}  %{A:p:}shutdown%{A}  %{A:r:}reboot%{A}  %{A:s:}suspend%{A}  %{A:b:}close%{A}  " | lemonbar -g ${PW}x${PH}+${PX}+${PY} -f "$FONT1" -f "$FONT2" -B "$BG" -F "$FG" -p | \
     while :; do
         read line
         case $line in 
@@ -35,7 +35,7 @@ echo "%{c}  %{A:l:}logout%{A}  %{A:p:}shutdown%{A}  %{A:r:}reboot%{A}  %{A:s:
                 exit
                 ;;
 	    'l')
-		bspc quit && pkill panel
+		bspc quit && pkill panel && pkill mpd
 		exit
 		;;
 

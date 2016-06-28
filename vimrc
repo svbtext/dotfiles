@@ -17,7 +17,7 @@
 	syntax enable
 	"let g:solarized_termcolors=256
 	"let g:solarized_termtrans=1
-	colorscheme default
+	colorscheme dotshare
 	set background=dark
 	"colors darkspectrum
 "	set nowrap

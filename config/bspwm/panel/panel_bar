@@ -33,11 +33,11 @@ while read -r line ; do
 			;;
 		L*)
 			# wifi link
-            wifi="$PADDING${line#?}$PADDING"
+            		wifi="$PADDING${line#?}$PADDING"
 			;;
 		P*)
 			# power
-            power="%{A:bspc quit && pkill panel:}$PADDING${line#?}$PADDING%{A}"
+            		power="%{A:bspc quit && pkill panel && pkill mpd:}$PADDING${line#?}$PADDING%{A}"
 			;;
 
 		W*)
@@ -52,7 +52,7 @@ while read -r line ; do
 					M*)
 						# active monitor
 						if [ $num_mon -gt 1 ] ; then
-							wm_infos="$wm_infos %{F$red}%{B$COLOR_BACKGROUND}$PADDING${name}$PADDING%{B-}%{F-}  "
+							wm_infos="$wm_infos %{F$red1}%{B$background}$PADDING${name}$PADDING%{B-}%{F-}  "
 						fi
 						;;
 					m*)
@@ -67,7 +67,7 @@ while read -r line ; do
 						;;
 					F*)
 						# focused free desktop
-						wm_infos="${wm_infos}%{F$black2}%{B$black1}%{U$black1}%{+u}$PADDING${name}$PADDING%{-u}%{B-}%{F-}"
+						wm_infos="${wm_infos}%{F$background}%{B$black1}%{U$black1}%{+u}$PADDING${name}$PADDING%{-u}%{B-}%{F-}"
 						;;
 					U*)
 						# focused urgent desktop

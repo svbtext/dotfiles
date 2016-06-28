@@ -8,7 +8,7 @@ alt + Return
 
 # program launcher
 alt + d
-	dmenu_run -dim .6 -fn 'neep-6' -p exec: -h 14 -t -q -nb '#121417' -nf '#deded6' -sb '#2b3135' -sf '#deded6'
+	dmenu_run -dim .6 -fn 'neep-6' -p exec: -h 14 -t -q -nb '#0b1317' -nf '#a899c1' -sb '#3b3644' -sf '#a899c1'
 
 # make sxhkd reload its configuration files:
 alt + shift + Escape
@@ -56,7 +56,7 @@ Delete
 #
 
 # quit bspwm normally
-ctrl + alt + Escape
+alt + shift + Backspace
         sh ~/.config/bspwm/panel/config_panel_bar_pop
 
 # close and kill

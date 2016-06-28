@@ -1,3 +1,9 @@
+#             _         _  _              
+#      __  __(_) _ __  (_)| |_  _ __  ___ 
+#      \ \/ /| || '_ \ | || __|| '__|/ __|
+#    _  >  < | || | | || || |_ | |  | (__ 
+#   (_)/_/\_\|_||_| |_||_| \__||_|   \___|
+
 #!/bin/sh
 #
 $HOME/.monicarc   #monitor calibration
@@ -14,7 +20,7 @@ export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 xrdb -load ~/.Xresources
 
 # Set wallpaper and bar
-hsetroot -tile ~/pic/Wallpapers/summertilebg.png &
+hsetroot -fill ~/.wallpapers/chicago3.jpg &
 
 # Hide the mouse after a period of inactivity
 unclutter -idle 2 &
