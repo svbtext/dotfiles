@@ -1,9 +1,10 @@
 #! /usr/bin/zsh
 
 PANEL_FIFO=/tmp/panel-fifo
-PANEL_HEIGHT=14
-#PANEL_GEO=1322x22+21+12
-PANEL_FONT_FAMILY="neep:size=6"
+PANEL_HEIGHT=16
+#PANEL_GEO=768x18+299+6
+#PANEL_GEO=1350x24+8+8
+PANEL_FONT_FAMILY="dweep:size=8"
 ICON_FONT="siji:size=8"
 
 if [ $(pgrep -cx panel) -gt 1 ] ; then
@@ -23,7 +24,7 @@ xtitle -sf 'T%s' > "$PANEL_FIFO" &
 # Clock
 while true;
 	do
-        echo 'C\ue128' $(date +"%l:%M %p");
+        echo 'C\ue016' $(date +"%l:%M");
 	sleep 5;
 done > "$PANEL_FIFO" &
 
@@ -94,12 +95,12 @@ done > $PANEL_FIFO &
 while true;
 do
 WIFI_SSID=$(iw wlp2s0 link | grep 'SSID' | sed 's/SSID: //' | sed 's/\t//')
-	echo L'\ue25c' $WIFI_SSID
+	echo L'\ue0f3' $WIFI_SSID
 	sleep 10
 done > $PANEL_FIFO &
 
 # Power
-echo P'\ue10d bspwm' > $PANEL_FIFO &
+echo P'\ue10d  bspwm'> $PANEL_FIFO &
 
 # music controls
 while true;
@@ -107,9 +108,9 @@ do
 	SONG_NAME=$(mpc | head -n1)
  	if [[ -n $(mpc status | grep paused) ]]
  	then
- 		echo "R%{T3}%{A:mpc prev:}\ue096%{A} %{A:mpc play:}\ue09a%{A} %{A:mpc next:}\ue09c%{A}%{T1} $SONG_NAME"
+ 		echo "R%{T3}%{A:mpc prev:}\ue0f4%{A} %{A:mpc play:}\ue0f8%{A} %{A:mpc next:}\ue0fa %{A}%{T1} $SONG_NAME"
  	else
- 		echo "R%{T3}%{A:mpc prev:}\ue096%{A} %{A:mpc pause:}\ue09b%{A} %{A:mpc next:}\ue09c%{A}%{T1} $SONG_NAME"
+ 		echo "R%{T3}%{A:mpc prev:}\ue0f4%{A} %{A:mpc pause:}\ue0f9%{A} %{A:mpc next:}\ue0fa %{A}%{T1} $SONG_NAME"
  	fi
 
  	sleep 1

@@ -1,12 +1,10 @@
 # dotfiles
 
-It's not original, but it's comfy for me and it compliments my workflow.
-
-## Some of these configs/scripts are very hacked together, YMMV
+Nothing mind-blowing or original, but it's comfy for me and it compliments my workflow.
 
 Current desktop:
 
-![scrot](https://0x0.st/TEm.png)
+![scrot](https://a.uguu.se/ZuRmp5cqW7Rl_chicago1.png)
 
 ## Inspirations
 * https://github.com/windelicato/dotfiles

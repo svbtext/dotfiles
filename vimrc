@@ -1,3 +1,4 @@
+	set runtimepath+=$HOME/.vim/plugin
 	set number 				" turn on line numbers and highlight colors
 	set ruler 				" Always show current positions along the bottom
 	set showcmd 				" show the command being typed
@@ -17,7 +18,7 @@
 	syntax enable
 	"let g:solarized_termcolors=256
 	"let g:solarized_termtrans=1
-	colorscheme dotshare
+	colorscheme city2
 	set background=dark
 	"colors darkspectrum
 "	set nowrap

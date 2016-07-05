@@ -2,39 +2,42 @@
 
 sxhkd &
 
-bspc config border_width         2
-bspc config window_gap           8
-bspc config top_padding          16
-#bspc config left_padding         16
-#bspc config right_padding        16
-#bspc config bottom_padding       16
+bspc config border_width         		2
+bspc config window_gap           		8
+bspc config top_padding          		24
+#bspc config left_padding          	16
+#bspc config right_padding         	16
+#bspc config bottom_padding        	16
 
-bspc config normal_border_color '#3b3644'
-bspc config focused_border_color '#5c7190'
-bspc config presel_feedback_color '#2b3135'
-bspc config normal_frame_opacity 0.0
-bspc config focused_frame_opacity 0.1
+bspc config normal_border_color 		'#1f3b47'
+bspc config focused_border_color 		'#5676a7'
+bspc config presel_feedback_color 	'#122229'
+bspc config normal_frame_opacity 		0.0
+bspc config focused_frame_opacity 	0.1
 
-bspc config split_ratio          0.50
-bspc config borderless_monocle   true
-bspc config gapless_monocle      true
-bspc config focus_by_distance    true
-bspc config history_aware_focus  true
-bspc config auto_cancel true
+bspc config split_ratio          		0.50
+bspc config borderless_monocle   		true
+bspc config gapless_monocle      		true
+bspc config focus_by_distance    		true
+bspc config history_aware_focus  		true
+bspc config auto_cancel 						true
 
-bspc monitor -d       
+bspc monitor -d {,,,,,}
 
-# Use xprop to find names
-bspc rule -a Firefox desktop=^3
-bspc rule -a Nitrogen state=floating
-bspc rule -a Colorgrab state=floating
-bspc rule -a Arandr state=floating
-bspc rule -a Bleachbit state=floating
-bspc rule -a Thunar desktop=^4 state=floating
-bspc rule -a Dialog desktop=^3
-bspc rule -a File-roller pseudo_tiled=on
-bspc rule -a meh state=floating manage=off
-bspc rule -a xfd state=floating
-bspc rule -a Places state=floating
+bspc rule -a Firefox 																		desktop='^3' state=floating center=on
+#bspc rule -a URxvt																			state=floating center=on
+bspc rule -a Nitrogen 																	state=floating 
+bspc rule -a Colorgrab 																	state=floating
+bspc rule -a Arandr 																		state=floating
+bspc rule -a Bleachbit 																	state=floating
+bspc rule -a Thunar 																		desktop='^4' state=floating center=on
+bspc rule -a Firefox:Dialog 														desktop='^3' state=floating center=on
+bspc rule -a Firefox:Places															desktop='^3' state=floating center=on
+bspc rule -a Firefox:SessionManager											desktop='^3' state=floating center=on
+bspc rule -a Firefox:Save Image													desktop='^3' state=floating center=on
+bspc rule -a Firefox:Library														desktop='^3' state=floating center=on
+bspc rule -a File-roller 																state=floating
+bspc rule -a Xfd																				state=floating
+bspc rule -a Lxappearance																state=floating
 
-$HOME/.config/bspwm/panel/panel &
+~/.config/bspwm/panel/panel &

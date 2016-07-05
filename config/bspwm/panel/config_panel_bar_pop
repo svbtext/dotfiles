@@ -1,14 +1,14 @@
 #!/bin/bash
 
-BG="#0b1317"
-FG="#a899c1"
+BG="#122229"
+FG="#d29a3d"
 
-FONT1="neep:size=6"
+FONT1="dweep:size=8"
 FONT2="siji:size=8"
 
 PW=256
 PH=24
-PX=556
+PX=555
 PY=372
 
 echo "%{c}  %{A:l:}logout%{A}  %{A:p:}shutdown%{A}  %{A:r:}reboot%{A}  %{A:s:}suspend%{A}  %{A:b:}close%{A}  " | lemonbar -g ${PW}x${PH}+${PX}+${PY} -f "$FONT1" -f "$FONT2" -B "$BG" -F "$FG" -p | \
@@ -34,10 +34,10 @@ echo "%{c}  %{A:l:}logout%{A}  %{A:p:}shutdown%{A}  %{A:r:}reboot%{A}  %{A:s:
                 reboot
                 exit
                 ;;
-	    'l')
-		bspc quit && pkill panel && pkill mpd
-		exit
-		;;
+	    			'l')
+								pkill -x panel; pkill mpd; bspc quit
+								exit
+								;;
 
         esac
     done

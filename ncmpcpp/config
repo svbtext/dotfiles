@@ -34,7 +34,7 @@ mpd_music_dir = "/home/svbtext/mus"
 #
 mpd_connection_timeout = "5"
 #
-mpd_crossfade_time = "1"
+mpd_crossfade_time = "0"
 #
 #mpd_communication_mode = "notifications" (polling/notifications)
 #
@@ -281,7 +281,7 @@ song_columns_list_format = "(10)[black]{l} (30)[blue]{a} (30)[green]{b} (30)[mag
 #
 playlist_shorten_total_times = "no"
 #
-#playlist_separate_albums = "no"
+playlist_separate_albums = "no"
 #
 playlist_display_mode = "classic" (classic/columns)
 #

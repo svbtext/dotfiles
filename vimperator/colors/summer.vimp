@@ -5,23 +5,23 @@
 " ==Ocean_Colorscheme_Settings==
 
 "StatusLine settings
-hi StatusLine           color: #deded6; background: #121417; font-size: 7pt;
-"hi StatusLineBroken     color: #deded6; background: #afafff; font-size: 7pt;
-"hi StatusLineSecure     color: #deded6; background: #afffaf; font-size: 7pt;
+hi StatusLine           color: #a899c1; background: #0b1317; font-size: 7pt;
+"hi StatusLineBroken     color: #899c1; background: #0b1317; font-size: 7pt;
+"hi StatusLineSecure     color: #899c1; background: #0b1317; font-size: 7pt;
 
 "CmdLine settings excluding Gradient
-hi Normal               color: #deded6; background: #121417;
-hi CmdLine              background:#121417; color: #deded6; font-size: 7pt;
-hi CompDesc             color: #c6c6c6; width: 50%; font-size: 7pt;
+hi Normal               color: #a899c1; background: #0b1317;
+hi CmdLine              background :#0b1317; color: #a899c1; font-size: 7pt;
+hi CompDesc             color: #0b1317; width: 50%; font-size: 7pt;
 hi CompIcon             width: 0px; min-width: 0px; visibility: hidden; display: inline-block; margin-right: .5ex;
-hi CompItem[selected]   background: #121417; color: #8fa1b3;
+hi CompItem[selected]   background: #a899c1; color: #0b1317;
 "hi CompLess             text-align: center; height: 0; line-height: .5ex; padding-top: 1ex;
 "hi CompMore             text-align: center; height: .5ex; line-height: .5ex; margin-bottom: -.5ex;
 hi CompMsg              margin-left: 12px; font-size: 7pt;
 hi CompResult           width: 45%; overflow: hidden;font-size: 7pt; font-family: "neep"; font-weight: normal;
-hi CompTitle            color: #deded6; background: #121417;
+hi CompTitle            color: #a899c1; background: #0b1317;
 hi CompTitle>*          padding: 0 .5ex;
-hi Filter               color: #deded6;
+hi Filter               color: #a899c1;
 
 "When using tab complete in CmdLine, line separating Title from function and description
 "hi Gradient             height: 1px; margin-bottom: -1px; margin-top: -1px;

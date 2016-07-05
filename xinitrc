@@ -1,11 +1,14 @@
-#             _         _  _              
-#      __  __(_) _ __  (_)| |_  _ __  ___ 
-#      \ \/ /| || '_ \ | || __|| '__|/ __|
-#    _  >  < | || | | || || |_ | |  | (__ 
-#   (_)/_/\_\|_||_| |_||_| \__||_|   \___|
+#		                             __                   
+#		           __            __ /\ \__                
+#		    __  _ /\_\     ___  /\_\\ \ ,_\  _ __   ___   
+#		   /\ \/'\\/\ \  /' _ `\\/\ \\ \ \/ /\`'__\/'___\ 
+#		 __\/>  </ \ \ \ /\ \/\ \\ \ \\ \ \_\ \ \//\ \__/ 
+#		/\_\/\_/\_\ \ \_\\ \_\ \_\\ \_\\ \__\\ \_\\ \____\
+#		\/_/\//\/_/  \/_/ \/_/\/_/ \/_/ \/__/ \/_/ \/____/
 
 #!/bin/sh
 #
+
 $HOME/.monicarc   #monitor calibration
 
 if [ -d /etc/X11/xinit/xinitrc.d ]; then
@@ -17,10 +20,16 @@ fi
 
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
+# Self-explanitory
 xrdb -load ~/.Xresources
 
+# Load custom keymapping
+if [ -s ~/.Xmodmap ]; then
+		xmodmap ~/.Xmodmap
+fi
+
 # Set wallpaper and bar
-hsetroot -fill ~/.wallpapers/chicago3.jpg &
+hsetroot -fill ~/pic/wallpapers/chicago3.jpg &
 
 # Hide the mouse after a period of inactivity
 unclutter -idle 2 &

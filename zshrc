@@ -12,6 +12,7 @@ export SHELL='/bin/zsh'
 export EDITOR='vim'
 export VIEW='firefox'
 export COLORTERM="YES"
+export RTV_EDITOR='vim'
 
 bindkey -v
 zstyle :compinstall filename '/home/svbtext/.zshrc'

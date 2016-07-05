@@ -1,3 +1,5 @@
+# vim: set ft=sxhkdrc:
+
 #
 # wm independent hotkeys
 #
@@ -8,11 +10,17 @@ alt + Return
 
 # program launcher
 alt + d
-	dmenu_run -dim .6 -fn 'neep-6' -p exec: -h 14 -t -q -nb '#0b1317' -nf '#a899c1' -sb '#3b3644' -sf '#a899c1'
+#	dmenu_run -dim .6 -fn 'dweep-8' -p exec: -h 16 -t -q -nb '#0b1317' -nf '#a899c1' -sb '#3b3644' -sf '#a899c1'
+	sh ~/proj/launcher
 
 # make sxhkd reload its configuration files:
 alt + shift + Escape
 	pkill -USR1 -x sxhkd
+
+# Toggle panels
+alt + p
+				{pkill panel; pkill cat; pkill conky; bspc config top_padding 0 ,\
+				bspc config top_padding 14; $HOME/.config/bspwm/panel/panel & }
 
 #
 # function keys
@@ -28,14 +36,26 @@ F11
 F10
 	amixer set Master toggle
 
-F1
-    $HOME/.config/bspwm/panel/notify_mpd -p
+alt + Up
+	mpc stop
 
-F2
-    $HOME/.config/bspwm/panel/notify_mpd -t 
+alt + Down
+	mpc toggle
 
-F3
-    $HOME/.config/bspwm/panel/notify_mpd -n
+alt + Left
+	mpc prev
+
+alt + Right
+	mpc next
+
+#F1
+#    $HOME/.config/bspwm/panel/notify_mpd -p
+
+#F2
+#    $HOME/.config/bspwm/panel/notify_mpd -t 
+
+#F3
+#    $HOME/.config/bspwm/panel/notify_mpd -n
 
 # brightness
 F6
@@ -48,15 +68,12 @@ F5
 Print
     maim ~/pic/scrot/$(date +%F-%T).png
 
-Delete
-    main --select ~/pic/scrot/$(date +%F-%T).png
-
 #
 # bspwm hotkeys
 #
 
 # quit bspwm normally
-alt + shift + Backspace
+alt + Escape
         sh ~/.config/bspwm/panel/config_panel_bar_pop
 
 # close and kill
