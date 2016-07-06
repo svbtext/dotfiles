@@ -16,7 +16,7 @@ beach lifegaurd 3
 
 beach sunset 1
 
-![beachsunset1](https://github.com/svbtext/dotfiles/blob/master/pic/wallpapers/beachsunset2.jpg?raw=true)
+![beachsunset1](https://github.com/svbtext/dotfiles/blob/master/pic/wallpapers/beachsunset1.jpg?raw=true)
 
 beach sunset 2
 
