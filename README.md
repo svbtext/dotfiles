@@ -1,12 +1,14 @@
 # dotfiles
 
-Nothing mind-blowing or original, but it's comfy for me and it compliments my workflow.
+nothing mind-blowing or original, but it's comfy for me and it compliments my workflow.
 
-Current desktop:
+current desktop:
 
-![scrot](https://a.uguu.se/ZuRmp5cqW7Rl_chicago1.png)
+![scrot](https://0x0.st/AwJ.png)
 
-pictured: rvt, meh, vim w/ nerdtree and lightline
+![scrot](https://0x0.st/Aw4.png)
+
+pictured: rvt, meh, vim w/ nerdtree and lightline, and pearl
 
 ## Inspirations
 * https://github.com/windelicato/dotfiles
