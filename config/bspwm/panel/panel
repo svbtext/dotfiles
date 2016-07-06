@@ -4,7 +4,8 @@ PANEL_FIFO=/tmp/panel-fifo
 PANEL_HEIGHT=16
 #PANEL_GEO=768x18+299+6
 #PANEL_GEO=1350x24+8+8
-PANEL_FONT_FAMILY="dweep:size=8"
+#PANEL_FONT_FAMILY="dweep:size=8"
+PANEL_FONT_FAMILY="neep:size=7"
 ICON_FONT="siji:size=8"
 
 if [ $(pgrep -cx panel) -gt 1 ] ; then

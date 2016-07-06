@@ -39,5 +39,6 @@ bspc rule -a Firefox:Library														desktop='^3' state=floating center=on
 bspc rule -a File-roller 																state=floating
 bspc rule -a Xfd																				state=floating
 bspc rule -a Lxappearance																state=floating
+bspc rule -a Gbdfed																			state=floating
 
 ~/.config/bspwm/panel/panel &

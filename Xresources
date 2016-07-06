@@ -1,5 +1,16 @@
-### Define term colors ###
-#include "/home/svbtext/.colors/city_mod"
+!			 __   __                                                                         
+!			/\.\,/. \.                                                                       
+!			\ `\`\/'/'   _ __    __     ____    ___    __  __   _ __   ___      __     ____  
+!			 `\/.> <    /\`'__\/'__`\. /',__\. / __`\./\ \/\.\./\`'__\/'___\. /'__`\. /.,__\. 
+!			 __ \/./\`\ \ \ \//\  __/ /\__, `\/\ \L\ \\ \ \_\ \\ \ \//\ \__/ /\  __/ /\__, `\
+!			/\_\/\_\\ \_\\ \_\\ \____\\/\____/\ \____/ \ \____/ \ \_\\ \____\\ \____\\/\____/
+!			\/_/\/_/ \/_/ \/_/ \/____/ \/___/  \/___/   \/___/   \/_/ \/____/ \/____/ \/___/ 
+!																			
+!		"You won't believe how long it took to get this stupid ascii to work" Edition
+!		svbtext - https://www.github.con/svbtext/dotfiles
+
+### Which color scheme are we using? ###
+#include "/home/svbtext/.colors/city"
 
 ### Define some terminal values ###
 URxvt*depth:            	24
@@ -11,12 +22,7 @@ URxvt.cursorBlink:      	true
 URxvt.pointerBlank:     	true
 URxvt*termName:						rxvt-256color
 
-!URxvt.borderLess:      	true
-
-!URxvt*.transparent:    	true
-!URxvt*.shading:        	10
-
-### Scrollbar ###
+### Hide that ugly scrollbar ###
 URxvt.scrollstyle:        plain
 URxvt.scrollBar:          false
 URxvt*scrollTtyOuput:     false
@@ -26,25 +32,26 @@ URxvt*scrollTtyKeypress:  true
 ### Login shell ###
 URxvt*loginShell: 				false
 
-### Fonts ###
+### Fonts (too many of them) ###
 !URxvt.font: xft:berry:pixelsize=12
 !URxvt.font: xft:tewi-8
 !URxvt.font: xft:cure-8
 !URxvt.font: xft:lemon-8
 !URxvt.font: xft:drift-8
 !URxvt.font: xft:creep-10
-!URxvt.font: xft:neep-6
+URxvt.font: xft:dweep-7,\
+						xft: Terminus-8
 !URxvt.font: xft:4thD-4
 !URxvt.font: xft:lime-8
 !URxvt.font: xft:ohsnap-8
 !URxvt.font: xft:bitocra-4
 !URxvt.font: xft:tinycandy-8
-!URxvt.font: xft:Terminus-12
-URxvt.font: xft:dweep-9
+!URxvt.font: xft:Terminus-8
 !URxvt.font xft:stlarch-8
+!URxvt.font: xft:tamsynmod-6
 
 URxvt.boldFont:
-URxvt*letterSpace:    0
+!URxvt*letterSpace:    1
 URxvt*lineSpace:      1
 
 ### Perl ###

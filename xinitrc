@@ -6,6 +6,8 @@
 #		/\_\/\_/\_\ \ \_\\ \_\ \_\\ \_\\ \__\\ \_\\ \____\
 #		\/_/\//\/_/  \/_/ \/_/\/_/ \/_/ \/__/ \/_/ \/____/
 
+# 	svbtext - https://www.github.com/svbtext/dotfiles
+
 #!/bin/sh
 #
 
@@ -29,7 +31,7 @@ if [ -s ~/.Xmodmap ]; then
 fi
 
 # Set wallpaper and bar
-hsetroot -fill ~/pic/wallpapers/chicago3.jpg &
+hsetroot -center ~/pic/wallpapers/chicago3.jpg &
 
 # Hide the mouse after a period of inactivity
 unclutter -idle 2 &

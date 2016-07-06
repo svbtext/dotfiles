@@ -3,7 +3,8 @@
 BG="#122229"
 FG="#d29a3d"
 
-FONT1="dweep:size=8"
+#FONT1="dweep:size=8"
+FONT1="neep:size=7"
 FONT2="siji:size=8"
 
 PW=256

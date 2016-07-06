@@ -36,17 +36,26 @@ F11
 F10
 	amixer set Master toggle
 
-alt + Up
-	mpc stop
-
-alt + Down
-	mpc toggle
-
 alt + Left
-	mpc prev
+	python ~/proj/scripts/mediacontrol.py prev
 
 alt + Right
-	mpc next
+	python ~/proj/scripts/mediacontrol.py next
+
+alt + Down
+	python ~/proj/scripts/mediacontrol.py toggle
+
+#alt + Up
+#	mpc stop
+
+#alt + Down
+#	mpc toggle
+
+#alt + Left
+#	mpc prev
+
+#alt + Right
+#	mpc next
 
 #F1
 #    $HOME/.config/bspwm/panel/notify_mpd -p

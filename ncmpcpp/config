@@ -170,7 +170,7 @@ message_delay_time = "3"
 #
 song_list_format = "{$5%a} $2»$8»$5» {$8%t}|{$8%f}$R{$2%b}"
 #
-song_status_format = "{$8%a} $2»$8»$5» $b{$1%b}$/b"
+song_status_format = "{$8%a} $2»$8»$5» $b{$2%b}$/b"
 #
 song_library_format = "{%n - }{%t}|{%f}"
 #
@@ -397,9 +397,9 @@ jump_to_now_playing_song_at_start = "yes"
 #
 #ask_before_clearing_main_playlist = "no"
 #
-clock_display_seconds = "yes"
+clock_display_seconds = "no"
 #
-display_volume_level = "yes"
+display_volume_level = "no"
 #
 display_bitrate = "yes"
 #
@@ -490,7 +490,7 @@ alternative_ui_separator_color = "white"
 #
 active_column_color = "white"
 #
-visualizer_color = "white"
+visualizer_color = "red,green,white"
 #
 #window_border_color = "green"
 #

@@ -1,0 +1,3 @@
+mv etc.backup etc
+ls
+cls
